@@ -1,0 +1,376 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	display: flex;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameContainer {
+	width: 600px;
+	height: 600px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	perspective: 1000px;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -99999;
+}
+
+.memoryCard {
+	width: 23%;
+	height: 23%;
+	margin: 5px;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.3s;
+  animation-duration: 0.3s;
+  border-radius : 10px;
+  box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+
+.memoryCard:active {
+	transform: scale(0.95);
+	transition: transform 0.2s ease-in-out;
+}
+
+.memoryCard.flip {
+		transform: rotateY(180deg);
+		cursor: pointer;
+	}
+
+.front, .back {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius : 10px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front{
+	transform: rotateY(180deg);
+}
+
+embed {
+  position: absolute;
+  visibility: hidden;
+}
+
+/** Game finished **/
+.completed {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 999;
+  background: rgba(0,0,0,0.6);
+}
+
+.completed > div {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0;
+}
+
+.completed > div:first-child {
+  font-size: 3em;
+  font-weight: 700;
+  color: red;
+}
+
+.completed .img-group > img {
+  width: 1200px;
+  height: 500px;
+}
+
+.completed .img-group {
+  position: relative;
+}
+
+img.auspicious-word,
+img.auspicious-word1,
+img.auspicious-word2,
+img.auspicious-word3,
+img.auspicious-word4,
+img.auspicious-word5,
+img.auspicious-word6,
+img.auspicious-word7,
+img.auspicious-word8,
+img.auspicious-word9 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  z-index: 9999999;
+  opacity: 0;
+  animation: text-animation 2.5s forwards;
+}
+
+img.auspicious-word {
+  top: 100px;
+  left: 150px;
+}
+
+img.auspicious-word1 {
+  top: 100px;
+  left: 260px;
+}
+
+img.auspicious-word2 {
+  top: 100px;
+  left: 370px;
+}
+
+img.auspicious-word3 {
+  top: 100px;
+  left: 480px;
+}
+
+img.auspicious-word4 {
+  top: 100px;
+  left: 590px;
+}
+
+img.auspicious-word5 {
+  top: 210px;
+  left: 480px;
+}
+
+img.auspicious-word6 {
+  top: 210px;
+  left: 590px;
+}
+
+img.auspicious-word7 {
+  top: 210px;
+  left: 700px;
+}
+
+img.auspicious-word8 {
+  top: 210px;
+  left: 810px;
+}
+
+img.auspicious-word9 {
+  top: 210px;
+  left: 920px;
+}
+
+button {
+  width: 70px;
+  height: 40px;
+  background: rgb(241, 33, 137);
+  border: none;
+  border-radius: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(241, 23, 52, 0.945);
+  transition: all 0.2s ease-out;
+}
+
+.d-none {
+  display: none;
+}
+
+
+@keyframes text-animation {
+  30% {
+    transform: translate(0, 10px) rotate(180deg) scale(1);
+  }
+  
+  60% {
+    transform: translate(0, 20px) scale(.8) rotate(0deg);
+  }
+
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .container {
+    height: 100%;
+  }
+
+  .gameContainer {
+    width: 600px;
+    height: 500px;
+  }
+
+  .img-group img.complete-book {
+    width: 950px;
+    height: 450px;
+  }
+
+  img.auspicious-word,
+  img.auspicious-word1,
+  img.auspicious-word2,
+  img.auspicious-word3,
+  img.auspicious-word4,
+  img.auspicious-word5,
+  img.auspicious-word6,
+  img.auspicious-word7,
+  img.auspicious-word8,
+  img.auspicious-word9 {
+    width: 100px;
+    height: 100px;
+  }
+
+  img.auspicious-word {
+    top: 100px;
+    left: 110px;
+  }
+
+  img.auspicious-word1 {
+    top: 100px;
+    left: 200px;
+  }
+
+  img.auspicious-word2 {
+    top: 100px;
+    left: 290px;
+  }
+
+  img.auspicious-word3 {
+    top: 100px;
+    left: 380px;
+  }
+
+  img.auspicious-word4 {
+    top: 100px;
+    left: 470px;
+  }
+
+  img.auspicious-word5 {
+    top: 190px;
+    left: 380px;
+  }
+
+  img.auspicious-word6 {
+    top: 190px;
+    left: 470px;
+  }
+
+  img.auspicious-word7 {
+    top: 190px;
+    left: 560px;
+  }
+
+  img.auspicious-word8 {
+    top: 190px;
+    left: 650px;
+  }
+
+  img.auspicious-word9 {
+    top: 190px;
+    left: 740px;
+  }
+
+}
+
+
+@media screen and (max-width: 769px) {
+  .container {
+    height: 100%;
+   
+  }
+
+  .gameContainer {
+    width: 400px;
+    height: 400px;
+    place-content: center;
+  }
+
+  .img-group img.complete-book {
+    width: 300px;
+    height: 400px;
+  }
+
+  img.auspicious-word,
+  img.auspicious-word1,
+  img.auspicious-word2,
+  img.auspicious-word3,
+  img.auspicious-word4,
+  img.auspicious-word5,
+  img.auspicious-word6,
+  img.auspicious-word7,
+  img.auspicious-word8,
+  img.auspicious-word9 {
+    width: 55px;
+    height: 55px;
+  }
+
+  img.auspicious-word {
+    top: 90px;
+    left: 100px;
+  }
+
+  img.auspicious-word1 {
+    top: 130px;
+    left: 100px;
+  }
+
+  img.auspicious-word2 {
+    top: 170px;
+    left: 100px;
+  }
+
+  img.auspicious-word3 {
+    top: 210px;
+    left: 100px;
+  }
+
+  img.auspicious-word4 {
+    top: 250px;
+    left: 100px;
+  }
+
+  img.auspicious-word5 {
+    top: 100px;
+    left: 150px;
+  }
+
+  img.auspicious-word6 {
+    top: 140px;
+    left: 150px;
+  }
+
+  img.auspicious-word7 {
+    top: 180px;
+    left: 150px;
+  }
+
+  img.auspicious-word8 {
+    top: 220px;
+    left: 150px;
+  }
+
+  img.auspicious-word9 {
+    top: 260px;
+    left: 150px;
+  }
+}
