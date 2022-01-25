@@ -63,6 +63,7 @@ body {
   border-radius : 10px;
   position: absolute;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .front{
