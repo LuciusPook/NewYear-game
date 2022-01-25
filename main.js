@@ -12,16 +12,16 @@ let arr = ["虎虎生風", "虎膽虎威", "虎氣沖天", "恭喜發財"]
 
 let index = Math.floor(Math.random() * arr.length)
 fontGroup.innerHTML = ` 
-    <img src="/img/fu.png" class="auspicious-word">
-    <img src="/img/fu.png" class="auspicious-word1">
-    <img src="/img/fu.png" class="auspicious-word2">
-    <img src="/img/fu.png" class="auspicious-word3">
-    <img src="/img/fu.png" class="auspicious-word4">
-    <img src="/img/fu.png" class="auspicious-word5">
-    <img src="/img/fu.png" class="auspicious-word6">
-    <img src="/img/fu.png" class="auspicious-word7">
-    <img src="/img/fu.png" class="auspicious-word8">
-    <img src="/img/fu.png" class="auspicious-word9">
+    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word">
+    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word1">
+    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word2">
+    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word3">
+    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word4">
+    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word5">
+    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word6">
+    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word7">
+    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word8">
+    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word9">
   `
 
 cards.forEach(card => card.addEventListener("click", flip));
