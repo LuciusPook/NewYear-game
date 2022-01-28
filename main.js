@@ -7,22 +7,25 @@ let isFlipped = false;
 let firstCard, secondCard;
 let lock = false;
 let score = 0
-let arr = ["虎虎生風", "虎膽虎威", "虎氣沖天", "恭喜發財"]
+let arr = ["https://i.ibb.co/kD3BhHB/001.png",
+  "https://i.ibb.co/4sFnRLc/002.png",
+  "https://i.ibb.co/7t0dcn1/003.png",
+  "https://i.ibb.co/1qsCyrS/004.png",
+  "https://i.ibb.co/wwHmGF0/005.png",
+  "https://i.ibb.co/8bQLLmn/006.png",
+  "https://i.ibb.co/BzXnV6v/007.png",
+  "https://i.ibb.co/Y80Hprm/008.png",
+  "https://i.ibb.co/nwC8ffL/009.png",
+  "https://i.ibb.co/7KtpVdD/0010.png",
+  "https://i.ibb.co/NY9PnM8/0011.png",
+  "https://i.ibb.co/QDNDQTW/0012.png"]
 
 
-let index = Math.floor(Math.random() * arr.length)
+let index = Math.floor(Math.random() * arr.length);
+let arrIndex = arr[index];
 fontGroup.innerHTML = ` 
-    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word">
-    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word1">
-    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word2">
-    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word3">
-    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word4">
-    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word5">
-    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word6">
-    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word7">
-    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word8">
-    <img src="https://i.ibb.co/2Y36zX4/fu.png" class="auspicious-word9">
-  `
+    <img src="${arrIndex}" class="auspicious-word">
+  `;
 
 cards.forEach(card => card.addEventListener("click", flip));
 

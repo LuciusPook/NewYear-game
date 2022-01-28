@@ -109,73 +109,20 @@ embed {
   position: relative;
 }
 
-img.auspicious-word,
-img.auspicious-word1,
-img.auspicious-word2,
-img.auspicious-word3,
-img.auspicious-word4,
-img.auspicious-word5,
-img.auspicious-word6,
-img.auspicious-word7,
-img.auspicious-word8,
-img.auspicious-word9 {
+img.auspicious-word {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 1000px;
+  height: 360px;
   z-index: 9999999;
   opacity: 0;
   animation: text-animation 2.5s forwards;
 }
 
 img.auspicious-word {
-  top: 100px;
-  left: 150px;
+  top: 70px;
+  left: 125px;
 }
 
-img.auspicious-word1 {
-  top: 100px;
-  left: 260px;
-}
-
-img.auspicious-word2 {
-  top: 100px;
-  left: 370px;
-}
-
-img.auspicious-word3 {
-  top: 100px;
-  left: 480px;
-}
-
-img.auspicious-word4 {
-  top: 100px;
-  left: 590px;
-}
-
-img.auspicious-word5 {
-  top: 210px;
-  left: 480px;
-}
-
-img.auspicious-word6 {
-  top: 210px;
-  left: 590px;
-}
-
-img.auspicious-word7 {
-  top: 210px;
-  left: 700px;
-}
-
-img.auspicious-word8 {
-  top: 210px;
-  left: 810px;
-}
-
-img.auspicious-word9 {
-  top: 210px;
-  left: 920px;
-}
 
 button {
   width: 70px;
@@ -199,7 +146,7 @@ button:hover {
 
 @keyframes text-animation {
   30% {
-    transform: translate(0, 10px) rotate(180deg) scale(1);
+    transform: translate(0, 10px) scale(1);
   }
   
   60% {
@@ -227,74 +174,19 @@ button:hover {
     height: 450px;
   }
 
-  img.auspicious-word,
-  img.auspicious-word1,
-  img.auspicious-word2,
-  img.auspicious-word3,
-  img.auspicious-word4,
-  img.auspicious-word5,
-  img.auspicious-word6,
-  img.auspicious-word7,
-  img.auspicious-word8,
-  img.auspicious-word9 {
-    width: 100px;
-    height: 100px;
+  img.auspicious-word {
+    width: 800px;
+    height: 300px;
   }
 
   img.auspicious-word {
-    top: 100px;
-    left: 110px;
+    top: 65px;
+    left: 95px;
   }
-
-  img.auspicious-word1 {
-    top: 100px;
-    left: 200px;
-  }
-
-  img.auspicious-word2 {
-    top: 100px;
-    left: 290px;
-  }
-
-  img.auspicious-word3 {
-    top: 100px;
-    left: 380px;
-  }
-
-  img.auspicious-word4 {
-    top: 100px;
-    left: 470px;
-  }
-
-  img.auspicious-word5 {
-    top: 190px;
-    left: 380px;
-  }
-
-  img.auspicious-word6 {
-    top: 190px;
-    left: 470px;
-  }
-
-  img.auspicious-word7 {
-    top: 190px;
-    left: 560px;
-  }
-
-  img.auspicious-word8 {
-    top: 190px;
-    left: 650px;
-  }
-
-  img.auspicious-word9 {
-    top: 190px;
-    left: 740px;
-  }
-
 }
 
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 767px) {
   .container {
     height: 100%;
    
@@ -311,67 +203,13 @@ button:hover {
     height: 400px;
   }
 
-  img.auspicious-word,
-  img.auspicious-word1,
-  img.auspicious-word2,
-  img.auspicious-word3,
-  img.auspicious-word4,
-  img.auspicious-word5,
-  img.auspicious-word6,
-  img.auspicious-word7,
-  img.auspicious-word8,
-  img.auspicious-word9 {
-    width: 55px;
-    height: 55px;
+  img.auspicious-word {
+    width: 250px;
+    height: 250px;
   }
 
   img.auspicious-word {
-    top: 90px;
-    left: 100px;
-  }
-
-  img.auspicious-word1 {
-    top: 130px;
-    left: 100px;
-  }
-
-  img.auspicious-word2 {
-    top: 170px;
-    left: 100px;
-  }
-
-  img.auspicious-word3 {
-    top: 210px;
-    left: 100px;
-  }
-
-  img.auspicious-word4 {
-    top: 250px;
-    left: 100px;
-  }
-
-  img.auspicious-word5 {
-    top: 100px;
-    left: 150px;
-  }
-
-  img.auspicious-word6 {
-    top: 140px;
-    left: 150px;
-  }
-
-  img.auspicious-word7 {
-    top: 180px;
-    left: 150px;
-  }
-
-  img.auspicious-word8 {
-    top: 220px;
-    left: 150px;
-  }
-
-  img.auspicious-word9 {
-    top: 260px;
-    left: 150px;
+    top: 75px;
+    left: 30px;
   }
 }
