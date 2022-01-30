@@ -85,10 +85,6 @@ function showGameFinished() {
 
 
 (function suffle() {
-  const audio = document.createElement("audio")
-  audio.src = "yinyue01.mp3"
-  audio.play()
-
   cards.forEach(card => {
     let position = Math.floor(Math.random() * 16);
     card.style.order = position;
